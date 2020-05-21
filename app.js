@@ -19,7 +19,7 @@ var dotenv = require('dotenv');
 dotenv.config();
 
 /**connect to de database */
-mongoose.connect(process.env.DATABASE, {useNewUrlParser: true, useUnifiedTopology: true}, err=>{
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true}, err=>{
   if(err) {
     throw err;
   }else{
